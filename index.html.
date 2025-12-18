@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web de Recursos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Web de Recursos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="recursos/ia/guia1.html">IA</a></li>
+                <li><a href="recursos/plantillas/plantilla1.html">Plantillas</a></li>
+                <li><a href="recursos/herramientas/herramienta1.html">Herramientas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bienvenido a tu repertorio de recursos</h2>
+            <p>Aquí encontrarás guías, plantillas y herramientas listas para usar.</p>
+        </section>
+
+        <section>
+            <h2>Últimos recursos</h2>
+            <ul>
+                <li><a href="recursos/ia/guia1.html">Guía de IA paso a paso</a></li>
+                <li><a href="recursos/plantillas/plantilla1.html">Plantilla para apuntes</a></li>
+                <li><a href="recursos/herramientas/herramienta1.html">Herramienta gratuita online</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mi Web de Recursos</p>
+    </footer>
+</body>
+</html>
