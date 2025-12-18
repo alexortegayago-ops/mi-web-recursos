@@ -3,51 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web de Recursos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>DeepFocus | Tu Santuario de Productividad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #6366f1; /* Indigo moderno */
+            --bg: #0f172a;    /* Azul noche profundo */
+            --card: #1e293b;
+            --text: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* DISEÑO DEL MENÚ */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            z-index: 100;
+        }
+
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--accent); }
+
+        /* CABECERA (HERRAMIENTA PRINCIPAL) */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%);
+        }
+
+        .timer-box {
+            background: var(--card);
+            padding: 50px;
+            border-radius: 40px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+
+        #timer { font-size: 6rem; font-weight: 700; margin: 20px 0; font-variant-numeric: tabular-nums; }
+
+        .btn-main {
+            background: var(--accent);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 15px;
+            border: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
+
+        /* SECCIONES DE CONTENIDO */
+        .section { padding: 80px 10%; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; }
+
+        .grid-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover { border: 1px solid var(--accent); }
+
+        footer { padding: 50px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); opacity: 0.6; }
+    </style>
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <h1>Mi Web de Recursos</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="recursos/ia/guia1.html">IA</a></li>
-                <li><a href="recursos/plantillas/plantilla1.html">Plantillas</a></li>
-                <li><a href="recursos/herramientas/herramienta1.html">Herramientas</a></li>
-            </ul>
-        </nav>
+
+    <nav>
+        <div class="logo">DeepFocus.</div>
+        <div>
+            <a href="#tecnicas" style="color:white; text-decoration:none; margin-left:20px;">Técnicas</a>
+            <a href="#blog" style="color:white; text-decoration:none; margin-left:20px;">Ciencia</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Entra en el Estado de Flujo</h1>
+        <p>Silencia el ruido externo y conquista tus metas hoy.</p>
+        
+        <div class="timer-box">
+            <div id="timer">25:00</div>
+            <button class="btn-main" onclick="toggleTimer()" id="mainBtn">Comenzar Sesión</button>
+            <br>
+            <button onclick="resetTimer()" style="background:none; border:none; color:gray; cursor:pointer; margin-top:15px;">Reiniciar</button>
+        </div>
     </header>
 
-    <!-- Contenido principal -->
-    <main>
-        <!-- Sección de bienvenida -->
-        <section>
-            <h2>Bienvenido a tu repertorio de recursos</h2>
-            <p>Aquí encontrarás guías, plantillas y herramientas listas para usar. Todo organizado por categorías para que accedas rápido a lo que necesitas.</p>
-        </section>
+    <section class="section" id="tecnicas">
+        <h2>Domina tu atención</h2>
+        <div class="grid-features">
+            <div class="feature-card">
+                <span style="font-size: 2rem;">🧠</span>
+                <h3>Deep Work</h3>
+                <p>Aprende a trabajar sin distracciones por periodos largos. Es la superpotencia del siglo XXI.</p>
+            </div>
+            <div class="feature-card">
+                <span style="font-size: 2rem;">🌊</span>
+                <h3>Sonido Ambiente</h3>
+                <p>Próximamente: Integraremos ruido blanco y sonidos de lluvia para aislar tu mente.</p>
+            </div>
+            <div class="feature-card">
+                <span style="font-size: 2rem;">📵</span>
+                <h3>Ayuno de Dopamina</h3>
+                <p>Cómo reconfigurar tu cerebro para disfrutar de las tareas difíciles nuevamente.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Sección de últimos recursos -->
-        <section>
-            <h2>Últimos recursos añadidos</h2>
-            <ul>
-                <li><a href="recursos/ia/guia1.html">Guía de IA paso a paso</a></li>
-                <li><a href="recursos/plantillas/plantilla1.html">Plantilla para apuntes</a></li>
-                <li><a href="recursos/herramientas/herramienta1.html">Herramienta gratuita online</a></li>
-            </ul>
-        </section>
+    <section class="section" id="blog" style="background:#131c2e;">
+        <h2>La Ciencia del Enfoque</h2>
+        <p>¿Sabías que tardas una media de **23 minutos** en volver a concentrarte después de una sola interrupción? En DeepFocus te ayudamos a proteger esos bloques de tiempo sagrados.</p>
+        <p>Este sitio está diseñado bajo los principios de la psicología cognitiva para reducir la fatiga visual y mental.</p>
+    </section>
 
-        <!-- Sección de información adicional -->
-        <section>
-            <h2>Cómo usar esta web</h2>
-            <p>Haz clic en las categorías del menú para ver todos los recursos disponibles. Cada recurso tiene instrucciones y archivos descargables para que empieces a usarlo de inmediato.</p>
-        </section>
-    </main>
-
-    <!-- Pie de página -->
     <footer>
-        <p>© 2025 Mi Web de Recursos | Creada con GitHub Pages</p>
+        <p>&copy; 2025 DeepFocus Studio. Creado para mentes brillantes.</p>
     </footer>
+
+    <script>
+        let timeLeft = 25 * 60;
+        let timerId = null;
+
+        function updateDisplay() {
+            const m = Math.floor(timeLeft / 60);
+            const s = timeLeft % 60;
+            document.getElementById('timer').innerText = `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function toggleTimer() {
+            const btn = document.getElementById('mainBtn');
+            if (timerId) {
+                clearInterval(timerId);
+                timerId = null;
+                btn.innerText = "Reanudar Sesión";
+                btn.style.background = "#10b981";
+            } else {
+                btn.innerText = "Pausar";
+                btn.style.background = "#ef4444";
+                timerId = setInterval(() => {
+                    if(timeLeft > 0) {
+                        timeLeft--;
+                        updateDisplay();
+                    } else {
+                        clearInterval(timerId);
+                        alert("Sesión terminada. ¡Buen trabajo!");
+                    }
+                }, 1000);
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(timerId);
+            timerId = null;
+            timeLeft = 25 * 60;
+            updateDisplay();
+            document.getElementById('mainBtn').innerText = "Comenzar Sesión";
+            document.getElementById('mainBtn').style.background = "#6366f1";
+        }
+    </script>
 </body>
 </html>
